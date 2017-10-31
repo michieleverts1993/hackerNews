@@ -7,17 +7,16 @@
 
 import UIKit
 
-class MainTableViewController: UITableViewController {
+class MainTableViewController: UITableViewController, UISearchBarDelegate {
     var newsObjects: [HackerNewsProperties] = []
     var newsItem: HackerNewsProperties?
     let mainRefreshControl = UIRefreshControl()
     var currentpage = 0
+    var searchController: UISearchController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
+        setUpSearchBar()
         refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
     // make a sharedinstance to your HackerNewService class
         HackerNewsService.sharedInstance.getTheHackerNews(pages: currentpage)
@@ -37,6 +36,10 @@ class MainTableViewController: UITableViewController {
             newsObjects = newsObjects + arrayObjects
             self.tableView.reloadData()
             }
+    }
+    func setUpSearchBar() {
+        self.searchController = UISearchController.init(searchResultsController: nil)
+        navigationItem.titleView = searchController?.searchBar
     }
 
     override func didReceiveMemoryWarning() {
