@@ -16,9 +16,8 @@ class HackerNewsService {
     private init() { // Singleton: https://en.wikipedia.org/wiki/Singleton_pattern
     }
     
-    func getTheHackerNews(pages: Int) {
-        print("https://hn.algolia.com/api/v1/search_by_date?query=creepypasta&page=\(pages)")
-        Alamofire.request("https://hn.algolia.com/api/v1/search_by_date?query=creepypasta&page=\(pages)").responseJSON { (jsonData)
+    func getTheHackerNews(pages: Int, query: String) {
+        Alamofire.request("https://hn.algolia.com/api/v1/search_by_date?query=\(query)&page=\(pages)").responseJSON { (jsonData)
             in
             print(jsonData)
             // var Array of classobjects/properties
@@ -27,7 +26,8 @@ class HackerNewsService {
             if let json = jsonData.result.value as? NSDictionary,
             // make a var in wich u store the array stored in de Dict, and optionally open it as NSArray
                 let hits = json["hits"] as? NSArray,
-                let pages = json["nbPages"] as? Int{
+                let pages = json["nbPages"] as? Int,
+                let query = json["query"] as? String{
                 self.totalNumberPages = pages
             // make a "for loop" to loop through the array to search for the dict's in the array and store every dict as an object in unwrappedDict (per 1)
                 for dict in hits {
@@ -48,7 +48,7 @@ class HackerNewsService {
                         }
                     }
                 }
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: NotificationID.getDataID),
+                                            NotificationCenter.default.post(name: NSNotification.Name(rawValue:                 NotificationID.getDataID),
                                                 object: self,
                                                 userInfo: [KeyID.hackerNewsID : itemArray])
             }

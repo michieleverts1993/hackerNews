@@ -10,7 +10,7 @@ import Foundation
 extension TimeInterval {
     func timepassed() -> String{
         let currentTime = NSDate().timeIntervalSince1970
-        let timeDifference = (currentTime - self)/1000
+        let timeDifference = currentTime - self
         let minutes = timeDifference / 60
         var time = ""
         
