@@ -12,6 +12,7 @@
 		95665A5B1FA342C5000735D3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95665A5A1FA342C5000735D3 /* MainViewController.swift */; };
 		95665A5D1FA34C13000735D3 /* HackerNewsProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95665A5C1FA34C13000735D3 /* HackerNewsProperties.swift */; };
 		95665A5F1FA34DC5000735D3 /* structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95665A5E1FA34DC5000735D3 /* structures.swift */; };
+		9591D73F1FA8E2950006A044 /* hackerNewsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591D73E1FA8E2950006A044 /* hackerNewsTest.swift */; };
 		95C63F271FA747610004F4AF /* TimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C63F261FA747610004F4AF /* TimeIntervalExtension.swift */; };
 		95D79EBB1FA3310100BE338F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D79EBA1FA3310100BE338F /* AppDelegate.swift */; };
 		95D79EC01FA3310100BE338F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D79EBE1FA3310100BE338F /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		95665A5A1FA342C5000735D3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = /Users/michieleverts/Desktop/Apps/hackerNews/hackerNews/MainViewController.swift; sourceTree = "<absolute>"; };
 		95665A5C1FA34C13000735D3 /* HackerNewsProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HackerNewsProperties.swift; path = DataLayer/HackerNewsProperties.swift; sourceTree = SOURCE_ROOT; };
 		95665A5E1FA34DC5000735D3 /* structures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = structures.swift; sourceTree = "<group>"; };
+		9591D73E1FA8E2950006A044 /* hackerNewsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hackerNewsTest.swift; sourceTree = "<group>"; };
 		95C63F261FA747610004F4AF /* TimeIntervalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimeIntervalExtension.swift; path = /Users/michieleverts/Desktop/Apps/hackerNews/DataLayer/TimeIntervalExtension.swift; sourceTree = "<absolute>"; };
 		95D79EB71FA3310100BE338F /* hackerNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackerNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D79EBA1FA3310100BE338F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		95D79EAE1FA3310100BE338F = {
 			isa = PBXGroup;
 			children = (
+				9591D73E1FA8E2950006A044 /* hackerNewsTest.swift */,
 				95665A571FA34077000735D3 /* customCells */,
 				95D79ECC1FA3326000BE338F /* DataLayer */,
 				95D79EB91FA3310100BE338F /* hackerNews */,
@@ -273,6 +276,7 @@
 				95665A5D1FA34C13000735D3 /* HackerNewsProperties.swift in Sources */,
 				95D79EBB1FA3310100BE338F /* AppDelegate.swift in Sources */,
 				95C63F271FA747610004F4AF /* TimeIntervalExtension.swift in Sources */,
+				9591D73F1FA8E2950006A044 /* hackerNewsTest.swift in Sources */,
 				95F50E961FA8D6E40047BDE9 /* MainTableViewExtension.swift in Sources */,
 				95F7F00F1FA7003300BE6499 /* WebViewController.swift in Sources */,
 				95665A551FA3406B000735D3 /* DataTableViewCell.swift in Sources */,
