@@ -26,8 +26,7 @@ class HackerNewsService {
             if let json = jsonData.result.value as? NSDictionary,
             // make a var in wich u store the array stored in de Dict, and optionally open it as NSArray
                 let hits = json["hits"] as? NSArray,
-                let pages = json["nbPages"] as? Int,
-                let query = json["query"] as? String{
+                let pages = json["nbPages"] as? Int{
                 self.totalNumberPages = pages
             // make a "for loop" to loop through the array to search for the dict's in the array and store every dict as an object in unwrappedDict (per 1)
                 for dict in hits {
